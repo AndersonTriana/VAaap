@@ -1,20 +1,108 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
+import Img from '../assets/images/img.jpg';
+
+
+
 
 function Footer () {
 return(   
-    <footer >    
-        <Card bg="dark" text="white" style={{ width: '18rem' } } className="mr-auto" >
-            <Card.Header>Header</Card.Header>
+    <footer className="col-md-6 offset-md-3" >    
+        <CardColumns>
+        <Card>
+            <Card.Img variant="top" src={Img} />
             <Card.Body>
-            <Card.Title>Dark Card Title</Card.Title>
+            <Card.Title>Card title that wraps to a new line</Card.Title>
             <Card.Text>
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
             </Card.Text>
             </Card.Body>
         </Card>
-        <br />
+        <Card className="p-3">
+            <blockquote className="blockquote mb-0 card-body">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                erat a ante.
+            </p>
+            <footer className="blockquote-footer">
+                <small className="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+            </footer>
+            </blockquote>
+        </Card>
+        <Card>
+            <Card.Img variant="top" src={Img} />
+            <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+                This card has supporting text below as a natural lead-in to additional
+                content.{' '}
+            </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+            <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+        </Card>
+        <Card bg="primary" text="white" className="text-center p-3">
+            <blockquote className="blockquote mb-0 card-body">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                erat a ante.
+            </p>
+            <footer className="blockquote-footer">
+                <small className="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+            </footer>
+            </blockquote>
+        </Card>
+        <Card className="text-center">
+            <Card.Img variant="top" src={Img} />
+            <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+                This card has supporting text below as a natural lead-in to additional
+                content.{' '}
+            </Card.Text>
+            <Card.Text>
+                <small className="import Card from 'react-bootstrap/Card';text-muted">Last updated 3 mins ago</small>
+            </Card.Text>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Img src={Img} />
+        </Card>
+        <Card className="text-right">
+            <blockquote className="blockquote mb-0 card-body">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                erat a ante.
+            </p>
+            <footer className="blockquote-footer">
+                <small className="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+            </footer>
+            </blockquote>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+                This is a wider card with supporting text below as a natural lead-in to
+                additional content. This card has even longer content than the first to
+                show that equal height action.
+            </Card.Text>
+            <Card.Text>
+                <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Text>
+            </Card.Body>
+        </Card>
+        </CardColumns>
+                <br />
     </footer>
 );
 }

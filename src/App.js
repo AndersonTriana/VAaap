@@ -6,11 +6,18 @@ import Footer from './components/footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Toolbar />
-        
+      <div>
+        <nav>
+          <Toolbar />
+        </nav>  
 
-        <Footer />
+        <section className="col-md-6 col-md-offset-3">
+
+        </section>
+
+        <footer>
+          <Footer />
+        </footer>
       </div>
     );
   }

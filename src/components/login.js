@@ -1,30 +1,53 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
+import FormGroup from 'react-bootstrap/FormGroup';
 
 function loginForm() {
     return(
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">        
-            <Form inline>
-                <InputGroup>
-                <InputGroup.Prepend>
-                    <InputGroup.Text id="basic-addon1">Ingreso</InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                    placeholder="Email"
-                    aria-label="Email"
-                    aria-describedby="basic-addon1"
-                />
-                </InputGroup>
-                </Form>
-                <Form inline>
-                <FormControl type="password" placeholder="Password" className=" mr-sm-2" />
-                <Button variant="success" type="submit">Ingresar</Button>
+        <DropdownButton title="Ingreso" variant="success" id="basic-nav-dropdown">        
+            <Form>  
+                <Form.Group>
+                    <Form.Control 
+                        type="email" 
+                        placeholder="Email" 
+                        className="col-md-10 offset-1"
+                    />
+                </Form.Group>
+
+                <FormGroup>
+                    <Form.Control 
+                    type="password" 
+                    placeholder="Contraseña" 
+                    className="col-md-10 offset-1"
+                    /> 
+                </FormGroup>
+
+                <FormGroup>
+                    <Form.Check 
+                        type="checkbox" 
+                        label="Recordarme" 
+                        className="text-muted col-md-10 offset-1"
+                    />
+                </FormGroup>
+
+                <Button 
+                    variant="success" 
+                    type="submit" 
+                    className="col-md-8 offset-2"
+                    >Ingresar
+                </Button>
+
+
             </Form>
-        </NavDropdown>
+
+
+
+
+        </DropdownButton>
     );
 }
 export default loginForm;
